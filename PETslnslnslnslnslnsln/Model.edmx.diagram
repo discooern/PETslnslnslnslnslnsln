@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5e7bd8572bd54cce8507a919d036839a" Name="Diagram1">
+        <EntityTypeShape EntityType="PETDBModel.Agents" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PETDBModel.Currencies" Width="1.5" PointX="7.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PETDBModel.Informants" Width="1.5" PointX="12.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PETDBModel.Logs" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PETDBModel.Nationalities" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PETDBModel.ObservantGroups" Width="1.5" PointX="10.875" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PETDBModel.Observants" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PETDBModel.Observations" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PETDBModel.Payments" Width="1.5" PointX="10" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PETDBModel.Persons" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <AssociationConnector Association="PETDBModel.FK_Agents_Persons" ManuallyRouted="false" />
+        <AssociationConnector Association="PETDBModel.FK_Payments_Currencies" ManuallyRouted="false" />
+        <AssociationConnector Association="PETDBModel.FK_Informants_Payments" ManuallyRouted="false" />
+        <AssociationConnector Association="PETDBModel.FK_Logs_Observations" ManuallyRouted="false" />
+        <AssociationConnector Association="PETDBModel.FK_Observants_ObservantGroups" ManuallyRouted="false" />
+        <AssociationConnector Association="PETDBModel.FK_Observants_Persons" ManuallyRouted="false" />
+        <AssociationConnector Association="PETDBModel.POBridge" ManuallyRouted="false" />
+        <AssociationConnector Association="PETDBModel.FK_Informants_Persons" />
+        <AssociationConnector Association="PETDBModel.FK_Persons_Nationalities" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

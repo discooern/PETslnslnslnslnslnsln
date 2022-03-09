@@ -1,0 +1,39 @@
+﻿<Window x:Class="PETslnslnslnslnslnsln.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PETslnslnslnslnslnsln"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1000">
+    <Grid x:Name="MainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".8*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Background="Black">
+            <Grid x:Name="LeftGrid" Margin="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <Button Grid.Row="1" x:Name="btnAgents" Content="Agents" FontSize="18" Click="btnAgents_click"></Button>
+                <Button Grid.Row="2" x:Name="btnInformants" Content="Informants" FontSize="18" Click="btnInformants_Click"></Button>
+                <Button Grid.Row="3" x:Name="btnObservants" Content="Observants" FontSize="18" Click="btnObservants_Click"></Button>
+                <Button Grid.Row="4" x:Name="btnObservantGroups" Content="Obs Groups" FontSize="18" Click="btnObservantGroups_Click"></Button>
+                <Button Grid.Row="5" x:Name="btnPersons" Content="Persons" FontSize="18" Click="btnPersons_Click"></Button>
+                <Button Grid.Row="6" x:Name="btnObservations" Content="Observations" FontSize="18" Click="btnObservations_Click"></Button>
+                <Button Grid.Row="7" x:Name="btnLogs" Content="Logs" FontSize="18" Click="btnLogs_Click"></Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1" x:Name="GridRight"/>
+    </Grid>
+</Window>
