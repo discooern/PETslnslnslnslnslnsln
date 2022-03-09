@@ -13,6 +13,7 @@ namespace PETslnslnslnslnslnsln
         Data data = new Data();
 
         #region Properties
+        // Collections of data
         public ObservableCollection<Agents> AgentsList
         {
             get { return data.AgentsList; }
@@ -58,6 +59,7 @@ namespace PETslnslnslnslnslnsln
         #endregion
 
         #region Methods
+        // Update data if data has changed
         private void OnPropertyChanged(string propertyName)
         {
             if (PropertyChanged != null)
@@ -65,6 +67,8 @@ namespace PETslnslnslnslnslnsln
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
+
+        // All methods for calling methods in data
         #region Agents Methods
         /// <summary>
         /// 

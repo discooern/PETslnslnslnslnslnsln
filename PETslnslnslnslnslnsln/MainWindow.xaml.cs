@@ -45,23 +45,29 @@ namespace PETslnslnslnslnslnsln
             #region Animation Enter
             // Properties for setting the enter animation
             var myDoubleAnimationEnter = new DoubleAnimation();
+            // Properties for setting the leave animation
             myDoubleAnimationEnter.From = 1.0;
             myDoubleAnimationEnter.To = 0.0;
+            // Animation duration
             myDoubleAnimationEnter.Duration = new Duration(TimeSpan.FromSeconds(.5));
             myStoryboardEnter = new Storyboard();
             myStoryboardEnter.Children.Add(myDoubleAnimationEnter);
             myStoryboardEnter.Completed += new EventHandler(myStoryboardEnter_Completed);
+            // Sets the property to change when doing animation
             Storyboard.SetTargetName(myDoubleAnimationEnter, GridRight.Name);
             Storyboard.SetTargetProperty(myDoubleAnimationEnter, new PropertyPath(Grid.OpacityProperty));
             #endregion
             #region Animation Leave
             // Properties for setting the leave animation
             var myDoubleAnimationLeave = new DoubleAnimation();
+            // Animation start and end values
             myDoubleAnimationLeave.From = 0.0;
             myDoubleAnimationLeave.To = 1.0;
+            // Animation duration
             myDoubleAnimationLeave.Duration = new Duration(TimeSpan.FromSeconds(.5));
             myStoryboardLeave = new Storyboard();
             myStoryboardLeave.Children.Add(myDoubleAnimationLeave);
+            // Sets the property to change when doing animation
             Storyboard.SetTargetName(myDoubleAnimationLeave, GridRight.Name);
             Storyboard.SetTargetProperty(myDoubleAnimationLeave, new PropertyPath(Grid.OpacityProperty));
             #endregion
@@ -77,6 +83,7 @@ namespace PETslnslnslnslnslnsln
             #endregion
         }
 
+        // When animationEnter has finished runs this code to set new userControl then starts the animationLeave
         private void myStoryboardEnter_Completed(object sender, EventArgs e)
         {
             GridRight.Children.Clear();
@@ -98,6 +105,10 @@ namespace PETslnslnslnslnslnsln
             tmp.IsEnabled = false;
         }
 
+        #region UserControls interaction
+        /// <summary>
+        // Sets the displayed userControl to "UserControl" starts an animation and disables the corresponding button
+        /// </summary>
         private void btnAgents_click(object sender, RoutedEventArgs e)
         {
             userControl = UCAgents;
@@ -146,5 +157,6 @@ namespace PETslnslnslnslnslnsln
             myStoryboardEnter.Begin(this);
             btnEnabled(btnLogs);
         }
+        #endregion
     }
 }

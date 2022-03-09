@@ -21,11 +21,40 @@ namespace PETslnslnslnslnslnsln.UserControls
     public partial class InformantsControl : UserControl
     {
         FunctionsLayer func;
+
         public InformantsControl(FunctionsLayer tmpFunc)
         {
             InitializeComponent();
             func = tmpFunc;
             DataContext = func;
+
+            List<Persons> AgentsListTMP = new List<Persons>();
+
+            foreach (Agents agent in func.AgentsList)
+            {
+                foreach (Persons person in func.PersonsList)
+                {
+                    if (agent.PersonID == person.ID)
+                    {
+                        AgentsListTMP.Add(person);
+                    }
+                }
+            }
+        }
+
+        private void DeleteAgent(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EditAgent(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddAgent(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

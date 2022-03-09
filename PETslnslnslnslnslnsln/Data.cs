@@ -12,6 +12,7 @@ namespace PETslnslnslnslnslnsln
         PETDBEntities db = new PETDBEntities();
 
         #region Properties
+        // Collections for data
         public ObservableCollection<Agents> AgentsList
         {
             get
@@ -104,10 +105,10 @@ namespace PETslnslnslnslnslnsln
         #endregion
 
         #region Methods
-        // 
+        // Data add/update/delete methods 
         #region Agents
         /// <summary>
-        /// 
+        /// Agents add/update/remove methods using tmp as input
         /// </summary>
         /// <param name="tmp"></param>
         public void AddAgent(Agents tmp)
@@ -127,7 +128,7 @@ namespace PETslnslnslnslnslnsln
 
         #region Informants
         /// <summary>
-        /// 
+        /// Informants add/update/remove methods using tmp as input
         /// </summary>
         /// <param name="tmp"></param>
         public void AddInformant(Informants tmp)
@@ -146,7 +147,7 @@ namespace PETslnslnslnslnslnsln
 
         #region Observants
         /// <summary>
-        /// 
+        /// Observants add/update/remove methods using tmp as input
         /// </summary>
         /// <param name="tmp"></param>
         public void AddObservant(Observants tmp)
@@ -165,7 +166,7 @@ namespace PETslnslnslnslnslnsln
 
         #region Persons
         /// <summary>
-        /// 
+        /// Persons add/update/remove methods using tmp as input
         /// </summary>
         /// <param name="tmp"></param>
         public void AddPerson(Persons tmp)
@@ -185,7 +186,7 @@ namespace PETslnslnslnslnslnsln
 
         #region Logs
         /// <summary>
-        /// 
+        /// Logs add method using tmp as input
         /// </summary>
         /// <param name="tmp"></param>
         public void AddLog(Logs tmp)
@@ -196,7 +197,7 @@ namespace PETslnslnslnslnslnsln
 
         #region ObservantGroups
         /// <summary>
-        /// 
+        /// ObservantGroups add/update/remove methods using tmp as input
         /// </summary>
         /// <param name="tmp"></param>
         public void AddObservantGroup(ObservantGroups tmp)
@@ -215,7 +216,7 @@ namespace PETslnslnslnslnslnsln
 
         #region Payments
         /// <summary>
-        /// 
+        /// Payments add/update/remove methods using tmp as input
         /// </summary>
         /// <param name="tmp"></param>
         public void AddPayment(Payments tmp)

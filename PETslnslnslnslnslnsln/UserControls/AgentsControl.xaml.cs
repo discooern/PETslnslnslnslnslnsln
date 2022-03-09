@@ -28,6 +28,8 @@ namespace PETslnslnslnslnslnsln.UserControls
             func = tmpFunc;
             DataContext = func;
 
+            #region Handling for finding agents
+            // Finds all persons that are in the agents table and puts them in a list for viewing
             List<Persons> AgentsListTMP = new List<Persons>();
 
             foreach(Agents agent in func.AgentsList)
@@ -40,21 +42,46 @@ namespace PETslnslnslnslnslnsln.UserControls
                     }
                 }   
             }
+            #endregion
         }
 
+        #region Data Creation Btn Events
+        // Button event handlers for clicking to add/remove/update data
         private void DeleteAgent(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                func.RemoveAgent(dgAgents.SelectedItem as Agents);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void EditAgent(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                func.UpdateAgent(dgAgents.SelectedItem as Agents);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void AddAgent(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                func.AddAgent(dgAgents.SelectedItem as Agents);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+        #endregion
     }
 }

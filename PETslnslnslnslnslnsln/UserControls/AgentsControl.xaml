@@ -12,10 +12,10 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <DataGrid x:Name="dgAgents" AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding AgentsList}">
+        <DataGrid x:Name="dgAgents" AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding PersonsList}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" x:Name="colName" Binding="{Binding Name}" Width="1*"/>
-                <DataGridTextColumn Header="Address" x:Name="colAddress" Width="1*"/>
+                <DataGridTextColumn Header="Address" x:Name="colAddress" Binding="{Binding Address}" Width="1*"/>
                 <DataGridTextColumn Header="CPR" x:Name="colCPR" Width="1*"/>
                 <DataGridTextColumn Header="Height" x:Name="colHeight" Width="1*"/>
                 <DataGridTextColumn Header="EyeColor" x:Name="colEyeColor" Width="1*"/>
